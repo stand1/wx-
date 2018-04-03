@@ -1,0 +1,76 @@
+/* pages/managementBJ/managementBJ.wxss */
+.wapper{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.header{
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-top: 20rpx solid #FAFAFA;
+  border-bottom: 20rpx solid #FAFAFA;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #B2B2B2;
+  letter-spacing: 0;
+}
+.header input{
+  width: 90%;
+  height: 110rpx;
+  line-height: 110rpx;
+  padding-left: 44rpx;
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 44rpx;
+}
+.content_wapper{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.txt{
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+.txt_img,.txt image{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 36rpx 36rpx 0 0;
+}
+.content_img,.content_img image,.add{
+  width: 290rpx;
+  height: 180rpx;
+  border-radius: 8rpx;
+}
+.add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80rpx;
+  color: #D8D8D8;
+  border: 1px dashed #D8D8D8;
+}
+
+
+.footer{
+  width: 100%;
+  position: absolute;
+  bottom:120rpx;
+  left: 0;
+}
+.confirm{
+  box-sizing: border-box;
+  width: 92.3%;
+  height: 112rpx;
+  line-height: 112rpx;
+  color: #fff;
+  border: none;
+  background-color: #5693FF;
+  border-radius: 8rpx;
+}

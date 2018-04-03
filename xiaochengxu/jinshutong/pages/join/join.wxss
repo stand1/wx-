@@ -1,0 +1,148 @@
+/* pages/join/join.wxss */
+.wapper{
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9E9E9E;
+}
+.header_wapper{
+  margin: 20px auto 15px;
+}
+.header{
+  margin: auto; 
+}
+.header_img,.header_img image{
+  width: 84px;
+  height: 84px;
+}
+.header_img{
+  background: #F5F5F5;
+  border: 1px solid #EFEFEF;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+.header_name{
+  text-align: center;
+  font-size: 14px;
+  color: #9E9E9E;
+  margin: 10px 0;
+}
+.comName{
+  margin: 0 auto;
+  font-size: 24px;
+  color: #555555;
+  text-align: center;
+}
+.conter{
+  width: 90%;
+  margin: 0 20px;
+  font-size: 14px;
+  color: #555;
+}
+.inputItem{
+  width: 100%;
+  padding: 10px 0;
+}
+.inputItem label text{
+  color: red;
+}
+.inputItem input{
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 3px;
+  padding-left: 20rpx;
+}
+.phcolor{
+  font-size: 16px;
+}
+.btn{
+  width: 100%;
+  margin: 10px 0;
+}
+.confirm{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #019DEA;
+  border: 1px solid #019DEA;
+  margin: 50px 0 100px;
+}
+
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 628rpx;
+  height: 800rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 200rpx;
+  left: 50%;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: 0rpx -314rpx;
+  border-radius: 36rpx;
+}
+.modal-title {
+  padding: 20rpx 0 60rpx;
+  display: flex;
+  justify-content: center;
+}
+.imgwapper{
+  width: 338rpx;
+  height: 334rpx;
+}
+.modal-title image{
+  width: 338rpx;
+  height: 334rpx;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+}
+.contenWapper{
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9E9E9E;
+  text-align: center;
+}
+.contenWapper .corname{
+  font-size: 24px;
+  color: #555555;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 120rpx;
+}
+.btn-confirm {
+  width: 548rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  color: #fff;
+  font-size: 20px;
+  background: #5693FF;
+  border-radius: 5px;
+  text-align: center;
+}

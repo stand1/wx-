@@ -1,0 +1,18 @@
+<!--pages/modification/modification.wxml-->
+<view class='wapper'>
+   <view class='wapper_content'>
+       <view class='header'>
+          <!-- <view class='header-left' bindtap='cancel'>完成</view> -->
+          <!-- <view class='header-right' bindtap='cancel'>取消</view> -->
+       </view>
+       <view class='content'>
+          <view class='content_wapper'>
+              <view class='content-left'><input type='text' value='{{val}}' placeholder='{{arrList[numType-1]}}' auto-focus='{{focus}}' bindchange='change' bindinput="bindinput"></input></view>
+              <view class='content-right' bindtap='clear' wx:if="{{length > 0}}"><image src='../../img/tubiao/delete@3x.png'></image></view>
+          </view>
+       </view>
+       <view class='footer'>
+          <view class='footer_content' bindtap='cancel'>完成</view>
+       </view>
+   </view>
+</view>

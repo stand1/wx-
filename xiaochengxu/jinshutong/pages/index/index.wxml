@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<view class='wapper'>
+  <!-- <view class='carousel'>
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-dots='{{indicatorDots}}' indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}">
+     <block>
+      <swiper-item>
+        <image src="../../img/ceshi/banner.png" class="slide-image" mode='scaleToFill' />
+      </swiper-item>
+      </block>
+    </swiper>
+  </view> -->
+  <view class='conten'>
+     <view class='company'>
+       <view class='company_img'><image src='{{logoArr.length==0?"../../img/tubiao/logo_m.png":logoArr[0]}}'></image></view>
+       <view class='company_mian'>
+              <text class='company_name'>{{dataList.data.company}}</text>
+              <view class='company_more'><text wx:if="{{dataList.data.city!=''}}">{{dataList.data.city}}</text><text>{{dataList.data.industry}}</text><text wx:if="{{dataList.data.authentication == 1}}">已认证</text></view>
+      </view>
+     </view>
+     <view class='introduce'>
+        <view class='nav'>
+           <text class='nav_left' data-num = "3" bindtap="clickNum"><text class="{{_num == 3?'add_citying':''}}">魅力员工</text></text>
+           <text class='nav_mian' data-num = "2" bindtap="clickNum"><text class="{{_num == 2?'add_citying':''}}">企业相册</text></text>
+           <text class='nav_right' data-num = "1" bindtap="clickNum"><text class="{{_num == 1?'add_citying':''}}">企业信息</text></text>
+        </view>
+        <view class='introduceConten'>
+           <view class="{{_num == 1 ? 'conten_txt_wapper_1':'conten_txt_wapper_2'}}">
+             <view class='conten_txt'>
+              <view class="conten_txtMian_t">
+                {{dataList.data.remark == null ? '' :dataList.data.remark}}
+              </view >
+              <!-- <view bindtap='isA' wx:if='{{!isA}}'><text class='conten_tb'></text></view>
+              <view bindtap='isA' wx:if='{{isA}}'><text class='conten_tp'></text></view> -->
+              <view class='conten_place'><text>地址: </text><text class='place'> {{dataList.data.address}}</text></view>
+              <view class='conten_phone'><text>电话: </text><text class='phone'> {{dataList.data.phone}}</text></view> 
+             </view>
+           </view>
+           <view class="{{_num == 2 ? 'conten_img_wapper_1' : 'conten_img_wapper_2'}}">
+              <view class='conten_img'>
+                 <view class='conten_img-left' bindtap='allImg'>
+                    <image src='{{comArr.length>0?comArr[0]:"../../img/tubiao/qy_m.png"}}'></image>
+                 </view>
+                 <view class='conten_img-right' bindtap='allImg'>
+                    <image class='imgtop' src='{{comArr.length>1?comArr[1]:"../../img/tubiao/qy_s.png"}}'></image>
+                    <image class='imgbottom' src='{{comArr.length>2?comArr[2]:"../../img/tubiao/qy_s.png"}}'></image>
+                 </view>
+              </view>
+              <view class='conten_buttom' bindtap='allImg'>查看全部 <image src='../../img/tubiao/check@3x.png'></image></view>
+           </view>  
+           <view class="{{_num == 3 ? 'conten_yg_1' : 'conten_yg_2'}}">
+            <view class='staff' bindtap='employeesShow' wx:for="{{starrArr}}" wx:key="{{this}}" data-index="{{index}}">
+                  <view class='staff_left'>
+                     <image src='{{item.imageurl}}' mode="aspectFill"></image>
+                  </view>
+                  <view class='staff_right'>
+                     <view class='staff_txt'><text>{{item.tags}}</text></view>
+                     <view class='staff_rq'>
+                       <view class='rqtxt'><text>人气：{{item.pageview}}</text></view>
+                       <view class='zan' wx:if='{{item.love == 0}}'>
+                         <image src='../../img/tubiao/dianzan_@3x.png'></image><text>{{ item.love}}</text>
+                       </view>
+                       <view class='zan' wx:if='{{item.love > 0}}'>
+                         <image src='../../img/tubiao/dianzan@3x.png'></image><text>{{ item.love}}</text>
+                       </view>
+                     </view>
+                  </view>
+              </view>
+           </view>
+           <!-- <view class='conten_place'><text>地址: </text><text class='place'> {{dataList.data.address}}</text></view>
+           <view class='conten_phone'><text>电话: </text><text class='phone'> {{dataList.data.phone}}</text></view>  -->
+        </view>
+     </view> 
+     <!-- <view class='staff'>
+        <view class='staff_txt'><text>魅力员工</text></view>
+        <view class='staff-img' bindtap='employeesShow'><image src='{{starrArr[0]}}'></image></view>
+     </view> -->
+  </view>
+   <view class="contenlist">  
+     <view class='contenlist_item' bindtap='visiting'>
+       <view class='contenlist_item_left'><image src='../../img/tubiao/lf.png' class='tubiao'></image>  来访登记</view>
+       <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+     </view>
+     <view class='contenlist_item' bindtap='material'>
+       <view class='contenlist_item_left'><image src='../../img/tubiao/wz.png' class='tubiao'></image> 物资领用</view>
+       <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image>  </view>
+     </view>
+  </view>   
+</view>
+
+
+
+

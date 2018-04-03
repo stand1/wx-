@@ -1,0 +1,16 @@
+<!--pages/employeesShow/employeesShow.wxml-->
+<view class='wapper'>
+   <view class='content'>
+      <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" current="0" bindchange='onSlideChangeEnd'>
+        <block wx:for="{{starrArr}}" wx:key="{{this}}">
+          <swiper-item>
+             <image src="{{item.imageurl}}" class="slide-image" mode="aspectFit"/>
+              <view class='dianzan' wx:if="{{item.isShow == 0}}" bindtap='dianzan' data-index="{{circular}}"><image src='../../img/tubiao/dianzan_.png'></image></view> 
+             <view class='dianzan' wx:if="{{item.isShow == 1}}" bindtap='dianzan' data-index="{{circular}}"><image src='../../img/tubiao/dianzan.png'></image></view>
+             <view class='txt'><text>{{item.tags}}</text><text class='txt_right'>{{index+1}}/{{arrLength}}</text></view>
+          </swiper-item>
+        </block>
+      </swiper>
+   </view>
+</view>

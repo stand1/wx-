@@ -1,0 +1,67 @@
+<!--pages/materialCollar/materialCollar.wxml-->
+<view class='header'>
+   <view class='header_content'>
+      <view class='header_left' bindtap='idNum' data-num='1'><text class='{{_num == 1 ? "active" :""}}'>物资领用</text></view>
+      <view class='header_right' bindtap='idNum' data-num='2'><text class='{{_num == 2 ? "active" :""}}'>领用列表</text></view>
+   </view>
+</view>
+
+<!-- 物资领用 -->
+<view class='{{_num == 1 ? "conten_1" :"conten_2"}}'>
+   <view class='contenwapper'>
+     <!--公共  -->
+      <view class='wrapper_item' wx:for="{{list}}" data-id="{{item.id}}" wx:key="*this">
+        <view class='item_name'>
+           <input type='text' value='{{item.para}}' bindchange='changePare' data-text='{{index}}' disabled="{{!item.para?false:true}}"></input>
+        </view>
+        <view class='item_conten'>
+          <text class='item item_reduce' bindtap='reduce' wx:if="{{item.amount > 0}}" data-reduce="{{index}}">-</text>
+          <text class='item_nub' wx:if="{{item.amount > 0}}">{{item.amount}}</text>
+          <text class='item item_add' bindtap='add' data-add="{{index}}">+</text>
+        </view>
+     </view> 
+   </view>
+   <view class='bottomWapper'>
+        <view class='custom' bindtap='custom'>添加自定义</view>
+   </view>
+   <view></view>
+   <view class='bottom'>
+     <text class='bottom_left' bindtap='selected'>已选物资  {{ totalNum}}</text>
+     <view class='bottom_right' bindtap='cof'>确认</view>
+   </view>
+</view>
+
+<!-- 物资列表 -->
+<view class='{{_num == 2 ? "wapper_1" :"wapper_2"}}'>
+    <view class="wapperTable">
+        <view class="wapperTr">
+            <view class="wapperTh txtLeft">物资</view>
+            <view class="wapperTh txtConten">数量</view>
+            <view class="wapperTh txtRight">领取时间</view>
+        </view>
+        <view class="wapperTr" wx:for='{{List.pageList}}' wx:key='{{this}}'>
+            <view class="wapperTd txtLeft">{{item.supplies}}</view>
+            <view class="wapperTd txtConten">{{item.count}}</view>
+            <view class="wapperTd txtRight">{{item.updatetime}}</view>
+        </view>
+    </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+     <view class='header-left'>已选物资</view>
+     <view class='header-right' bindtap='clear'>清空</view>
+  </view>
+  <view class="modal-content">
+     <view class='wrapper_item' wx:for="{{newList}}" data-id="{{item.id}}" wx:key="{{this}}">
+        <view class='item_name'>{{item.para}}</view>
+        <view class='item_conten'>
+          <text class='item item_reduce'  wx:if="{{item.amount > 0}}" data-reduce="{{index}}" data-name='{{item.para}}' data-id="{{item.id}}"bindtap='itemReduce'>-</text>
+          <text class='item_nub' wx:if="{{item.amount > 0}}">{{item.amount}}</text>
+          <text class='item item_add'  data-reduce="{{index}}" data-name='{{item.para}}' data-id="{{item.id}}"bindtap='itemAdd'>+</text>
+        </view>
+     </view>
+  </view>
+</view>

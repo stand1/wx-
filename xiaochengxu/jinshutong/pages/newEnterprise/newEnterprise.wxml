@@ -1,0 +1,49 @@
+<!--pages/newEnterprise/newEnterprise.wxml-->
+<view class='header'>
+ <text class='txt'>新建企业</text>
+</view>
+
+<view class='conten'>
+ <view class='inputItem'>
+   <label>公司名称</label>
+   <input placeholder-class="phcolor" type='text' bindchange='bindblurCorName'data-name='公司名称' placeholder='请输入您的公司名称' value='{{name}}'></input>
+ </view>
+ <view class='inputItem'>
+   <label>地理位置</label>
+   <!-- <input placeholder-class="phcolor" type='text' bindchange='bindfocusCity' data-name='' placeholder='请输入公司地理位置' value='{{city}}'></input> -->
+   <view bindtap='bindfocusCity' class='city'>{{city}}</view>
+ </view>
+ <view class='inputItem'>
+   <label>行业</label>
+   <view class="section">
+     <picker bindchange="industryName" value="{{20}}" range="{{industryName}}">
+       <view class="picker">
+         <!-- <input placeholder-class="phcolor" type='text' placeholder='请选择' value='{{industryName[index]}}' data-name='行业'></input> -->
+         <view class='city'>{{industryName[index]==undefined?'请选择':industryName[index]}}</view>
+       </view>
+     </picker>
+   </view>
+ </view>
+ <view class='inputItem'>
+    <button class='confirm' bindtap='getInformation' >确认</button>
+ </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+    <view class='imgwapper'>
+      <image src='../../img/tubiao/champion@3x.png'></image>
+    </view>
+  </view>
+  <view class="modal-content">
+    <view class='contenWapper'>
+      <view>您已成功<text>创建</text></view>
+      <view class='corname'>{{name}}</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">返回微主页</view>
+  </view>
+</view>

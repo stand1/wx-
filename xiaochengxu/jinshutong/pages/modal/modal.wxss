@@ -1,0 +1,76 @@
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 628rpx;
+  height: 800rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 200rpx;
+  left: 50%;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: 0rpx -314rpx;
+  border-radius: 36rpx;
+}
+.modal-title {
+  padding: 20rpx 0 60rpx;
+  display: flex;
+  justify-content: center;
+}
+.imgwapper{
+  width: 338rpx;
+  height: 334rpx;
+}
+.modal-title image{
+  width: 338rpx;
+  height: 334rpx;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+}
+.contenWapper{
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9E9E9E;
+  text-align: center;
+}
+.contenWapper .corname{
+  font-size: 24px;
+  color: #555555;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 120rpx;
+}
+.btn-confirm {
+  width: 548rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  color: #fff;
+  font-size: 20px;
+  background: #5693FF;
+  border-radius: 5px;
+  text-align: center;
+}

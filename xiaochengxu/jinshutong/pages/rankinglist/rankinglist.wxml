@@ -1,0 +1,18 @@
+<!--pages/rankinglist/rankinglist.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+      <view class='conter_item_wapper' wx:for="{{Company}}" wx:key="{{this}}" bindtap='getIdNearby' data-index='{{index}}'>
+        <view class='conter_item'>
+          <view class='item_left'>
+            <view class='item_img'><image src="{{item.logo != '' ? item.logo : '../../img/tubiao/user_logo_m.png'}}"></image></view>
+            <text class='item_name'>{{item.company}}</text>
+          </view>
+          <view class='item_right'>
+             <view class='txt'>人气：{{item.pv}}</view>
+             <view class='img'><image src='../../img/tubiao/next@3x.png'></image></view>
+          </view>
+        </view>
+      </view>
+   </view>
+</view>
+

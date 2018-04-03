@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class='wapper'>
+  <view class='wapper_content'>
+      <view class='header'>
+         <view class='header_img'><image src='../../img/logo/logo_footer.png' mode='widthFix'></image></view>
+         <view class='header_txt' wx:if='{{txt}}'>金书僮允许微信登陆</view>
+         <view class='header_t' wx:if='{{!txt}}'>已成功登陆微信</view>
+      </view>
+      <view class='footer'>
+         <view class='but_qr' bindtap='comify' wx:if='{{txt}}'><button type="primary">确认</button></view>
+         <!-- <view class='but_qx'><button type="default">取消</button></view> -->
+      </view>
+  </view>
+</view>

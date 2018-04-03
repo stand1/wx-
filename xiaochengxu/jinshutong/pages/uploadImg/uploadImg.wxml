@@ -1,0 +1,17 @@
+<!--pages/uploadImg/uploadImg.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+       <view class='pics'>
+          <view wx:for="{{imgArr}}" wx:key="{{this}}" bindtouchstart="mytouchstart" bindtouchend="mytouchend" bindtap="editAddress" data-num='{{index}}'><image src='{{item}}'></image></view>
+       </view>
+       <view class='addImg' bindtap='choose'>+</view>
+   </view> 
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}" bindtap="hideModal">
+  <view class="modal-content">
+    <image src='{{img}}' mode='widthFix'></image>
+  </view>
+</view>

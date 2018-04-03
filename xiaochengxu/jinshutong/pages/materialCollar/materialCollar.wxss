@@ -1,0 +1,213 @@
+/* pages/materialCollar/materialCollar.wxss */
+.header{
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #878787;
+  letter-spacing: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header_content{
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  display: flex;
+  justify-content: center;
+}
+.header_left,.header_right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.active{
+  color: #488AFF;
+  border-bottom: 2px solid #5693FF;
+}
+.conten_1{
+  display: block;
+  width: 100%;
+}
+.conten_2{
+  display: none;
+  width: 100%;
+}
+.contenwapper{
+  width: 100%;
+  font-size: 14px;
+  color: #555;
+}
+.wrapper_item{
+  display: flex;
+  justify-content: space-between;
+  border-top:1px solid #F5F5F5;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  color: #555555;
+  overflow: hidden;
+}
+.item_name{
+  margin-left: 20px;
+  width:50%;
+}
+.item_name input{
+  height: 48px;
+}
+.item_conten{
+  margin-right: 20px;
+  min-width: 90px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.item_nub{
+   margin: 0 20px; 
+}
+.item{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  color: #fff;
+  font-size: 16px;
+  background: #71A4FF;
+  border-radius: 50%; 
+}
+.bottomWapper{
+  width: 100%;
+  font-size: 18px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  border-top:1px solid #F5F5F5;
+  padding-top: 15px;
+  margin-bottom: 300px;
+  padding-bottom: 300px;
+}
+
+
+.bottom{
+  display: flex;
+  z-index: 999;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  align-items:center;
+  position: fixed;
+  bottom:0;
+}
+.bottom .bottom_left{
+  text-align: left;
+  flex-grow: 2;
+  background-color: #8E8E8E;
+  font-size: 16px;
+  color:#fff;
+  padding-left: 20px;
+}
+.bottom .bottom_right{
+  text-align: center;
+  flex-grow: 1;
+  height: 48px;
+  line-height: 48px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  background: #71A4FF;
+}
+
+/* 物资列表 */
+.wapper_1{
+  display: block;
+  width: 90%;
+  height: 768px;
+  overflow: auto;
+  margin: 0 20px;
+  font-size: 18px;
+}
+.wapper_2{
+  display: none;
+  width: 90%;
+  height: 768px;
+  overflow: auto;
+  margin: 0 20px;
+  font-size: 18px;
+}
+.wapperTable{
+  border:none;
+}
+.wapperTr{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wapperTh,.wapperTd{
+  padding: 10px 0;
+  width: 100%;
+  color: #555555;
+  font-size: 16px;
+}
+.wapperTh{
+  font-weight: 600;
+  font-size: 18px;
+}
+.txtLeft{
+  text-align: left;
+}
+.txtRight{
+  text-align: right;
+}
+.txtConten{
+  text-align: center;
+}
+
+
+
+/* 模态框 */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 48px;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 999;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 100%;
+  min-height: 50px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #555555;
+  overflow: hidden;
+  position: fixed;
+  bottom:48px;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+}
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  line-height: 48px;
+  margin: 0 20px;
+}
+.modal-content {
+  width:100%;
+  font-size:14px;
+  color:#555;
+  min-height: 48px;
+  max-height: 600rpx;
+  overflow: auto;
+}
+

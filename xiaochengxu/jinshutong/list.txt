@@ -1,0 +1,140 @@
+文件夹 PATH 列表
+卷序列号为 000D-E30E
+D:.
+│  app.js
+│  app.json
+│  app.wxss
+│  list.txt
+│  project.config.json
+│  
+├─img
+│  ├─ceshi
+│  │      banner.png
+│  │      img.png
+│  │      
+│  ├─logo
+│  │      home_1.png
+│  │      home_2.png
+│  │      logo_footer.png
+│  │      phb_1.png
+│  │      phb_2.png
+│  │      proe_1.png
+│  │      proe_2.png
+│  │      
+│  └─tubiao
+│          address@3x.png
+│          champion@3x.png
+│          check@3x.png
+│          delete@3x.png
+│          fw - 副本.png
+│          fw.png
+│          lf.png
+│          next@3x - 副本.png
+│          next@3x.png
+│          qyrz.png
+│          wz.png
+│          
+├─pages
+│  ├─comImg
+│  │      comImg.js
+│  │      comImg.json
+│  │      comImg.wxml
+│  │      comImg.wxss
+│  │      
+│  ├─comshow
+│  │      comshow.js
+│  │      comshow.json
+│  │      comshow.wxml
+│  │      comshow.wxss
+│  │      
+│  ├─enter
+│  │      enter.js
+│  │      enter.json
+│  │      enter.wxml
+│  │      enter.wxss
+│  │      
+│  ├─footerLogo
+│  │      footerLogo.wxml
+│  │      footerLogo.wxss
+│  │      
+│  ├─index
+│  │      index.js
+│  │      index.json
+│  │      index.wxml
+│  │      index.wxss
+│  │      
+│  ├─intro
+│  │      intro.js
+│  │      intro.json
+│  │      intro.wxml
+│  │      intro.wxss
+│  │      
+│  ├─join
+│  │      join.js
+│  │      join.json
+│  │      join.wxml
+│  │      join.wxss
+│  │      
+│  ├─logs
+│  │      logs.js
+│  │      logs.json
+│  │      logs.wxml
+│  │      logs.wxss
+│  │      
+│  ├─materialCollar
+│  │      materialCollar.js
+│  │      materialCollar.json
+│  │      materialCollar.wxml
+│  │      materialCollar.wxss
+│  │      
+│  ├─materialCollarList
+│  │      materialCollarList.js
+│  │      materialCollarList.json
+│  │      materialCollarList.wxml
+│  │      materialCollarList.wxss
+│  │      
+│  ├─modal
+│  │      modal.js
+│  │      modal.json
+│  │      modal.wxml
+│  │      modal.wxss
+│  │      
+│  ├─modification
+│  │      modification.js
+│  │      modification.json
+│  │      modification.wxml
+│  │      modification.wxss
+│  │      
+│  ├─newEnterprise
+│  │      newEnterprise.js
+│  │      newEnterprise.json
+│  │      newEnterprise.wxml
+│  │      newEnterprise.wxss
+│  │      
+│  ├─personalCenter
+│  │      personalCenter.js
+│  │      personalCenter.json
+│  │      personalCenter.wxml
+│  │      personalCenter.wxss
+│  │      
+│  ├─ranking
+│  │      ranking.js
+│  │      ranking.json
+│  │      ranking.wxml
+│  │      ranking.wxss
+│  │      
+│  ├─uploadImg
+│  │      uploadImg.js
+│  │      uploadImg.json
+│  │      uploadImg.wxml
+│  │      uploadImg.wxss
+│  │      
+│  └─visitorRegistration
+│          visitorRegistration.js
+│          visitorRegistration.json
+│          visitorRegistration.wxml
+│          visitorRegistration.wxss
+│          
+└─utils
+        util.js
+        

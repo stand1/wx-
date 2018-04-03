@@ -1,0 +1,43 @@
+/* pages/materialCollarList/materialCollarList.wxss */
+.header{
+  margin:20px 0;
+}
+.txt{
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin-left: 20px;
+}
+.wapper{
+  width: 90%;
+  margin: 0 20px;
+  font-size: 18px;
+}
+.wapperTable{
+  border:none;
+}
+.wapperTr{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wapperTh,.wapperTd{
+  padding: 10px 0;
+  width: 100%;
+  color: #555555;
+  font-size: 16px;
+}
+.wapperTh{
+  font-weight: 600;
+  font-size: 18px;
+}
+.txtLeft{
+  text-align: left;
+}
+.txtRight{
+  text-align: right;
+}
+.txtConten{
+  text-align: center;
+}
+

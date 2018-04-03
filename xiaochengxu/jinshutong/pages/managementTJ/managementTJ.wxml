@@ -1,0 +1,18 @@
+<!--pages/managementTJ/managementTJ.wxml-->
+<view class='wapper'>
+   <view class='header'>
+      <view class='txt'>
+        <input placeholder-class="phcolor" type='text' placeholder='标题' value='{{val}}' bindinput='bindinput'></input>
+        <view class='txt-img' bindtap='clear' wx:if="{{length != 0}}"><image src='../../img/tubiao/delete@3x.png'></image></view>
+      </view>
+   </view>
+   <view class='content'>
+      <view class='content_wapper'>
+          <view class='content_img' wx:if="{{imgArr.length != 0}}" wx:for="{{imgArr}}" wx:key="{{this}}"><image src='{{item}}'></image></view> 
+          <view class='add' bindtap='add'>+</view> 
+      </view>
+   </view>
+   <view class='footer'>
+      <button class='confirm' bindtap='confirm' >完成</button> 
+   </view>
+</view>

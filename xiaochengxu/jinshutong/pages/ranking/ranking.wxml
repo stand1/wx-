@@ -1,0 +1,39 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+      <view class='conter_header'>
+         <text class='header_name'>附近公司排行</text>
+         <text bindtap='getNearby'>查看全部</text>
+      </view>
+      <view class='conter_item_wapper' wx:for="{{nearbyCompany}}" wx:key="{{this}}" bindtap='getIdNearby' data-index='{{index}}'>
+        <view class='conter_item'>
+          <view class='item_left'>
+            <view class='item_img'><image src="{{item.logo != '' ? item.logo : '../../img/tubiao/user_logo_m.png'}}"></image></view>
+            <text class='item_name'>{{item.company}}</text>
+          </view>
+          <view class='item_right' wx:if="{{item.pv}}">
+             <view class='txt'>人气：{{item.pv}}</view>
+             <view class='img'><image src='../../img/tubiao/next@3x.png'></image></view>
+          </view>
+        </view>
+      </view>
+   </view>
+   <view class='conter'>
+      <view class='conter_header'>
+         <text class='header_name'>当日公司排行</text>
+         <text bindtap='getDay'>查看全部</text>
+      </view>
+      <view class='conter_item_wapper' wx:for="{{tocompanylist}}" wx:key="{{this}}" bindtap='getIdTocompany' data-index='{{index}}'>
+        <view class='conter_item'>
+          <view class='item_left'>
+            <view class='item_img'><image src="{{item.logo != '' ? item.logo : '../../img/tubiao/user_logo_m.png'}}"></image></view>
+            <text class='item_name'>{{item.company}}</text>
+          </view>
+          <view class='item_right' wx:if="{{item.pv}}">
+             <view class='txt'>人气：{{item.pv}}</view>
+             <view class='img'><image src='../../img/tubiao/next@3x.png'></image></view>
+          </view>
+        </view>
+      </view>
+   </view>
+</view>

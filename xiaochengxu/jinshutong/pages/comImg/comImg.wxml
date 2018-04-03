@@ -1,0 +1,27 @@
+<!--pages/comImg/comImg.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+       <view class='imgList'>
+          <view wx:for="{{imgList}}" wx:key="{{this}}" bindtap='imgshow' data-index='{{index}}'><image src='{{item}}'></image></view>
+       </view>
+   </view>
+</view>
+
+
+<!--弹窗-->
+<!-- <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view class='contenWapper'>
+      <view class='img'><image src='{{img}}'></image></view>
+    </view>
+  </view>
+</view> -->
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}" bindtap="hideModal">
+  <view class="modal-content">
+    <image src='{{img}}' mode='widthFix'></image>
+  </view>
+</view>

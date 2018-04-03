@@ -1,0 +1,91 @@
+.header{
+  margin:20px 0;
+}
+.txt{
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin-left: 20px;
+}
+.conten{
+  width: 90%;
+  margin: 0 20px;
+  font-size: 14px;
+  color: #555;
+}
+.inputItem{
+  width: 100%;
+  box-sizing: border-box;
+}
+.inputItem label{
+  font-size: 32rpx;
+}
+.inputItem label text{
+  color: red;
+  font-size: 12rpx;
+}
+.inputItem label text.label_t{
+  font-size: 32rpx;
+  margin-left: 10rpx;
+  color: #555;
+}
+.inputItem label text.label_txt{
+  font-size: 35rpx;
+  margin-left: 18rpx;
+  color: #555;
+}
+.inputItem input{
+  box-sizing: border-box;
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  background-color: #eee;
+  border-radius: 8rpx;
+  padding-left: 20rpx;
+  margin: 16rpx 0 32rpx;
+}
+.inputItem .city{
+  box-sizing: border-box;
+  line-height: 96rpx;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  color: #B2B2B2;
+  background-color: #eee;
+  margin: 16rpx 0 32rpx;
+  border-radius: 8rpx
+}
+.phcolor{
+  font-size: 32rpx;
+  color: #B2B2B2;
+}
+.btn{
+  width: 100%;
+  margin: 10px 0;
+}
+.inputItem .interview,.inputItem .other{
+  display: inline-block;
+  width: 25%;
+  height: 12%;
+  border: 1px solid #019DEA;
+  border-radius: 3px;
+  color: #019DEA;
+  background-color: #fff;
+}
+.inputItem .interview{
+  color: #fff;
+  background-color: #019DEA;
+  margin-right: 20PX;
+}
+.confirm{
+  box-sizing: border-box;
+  width: 90%;
+  height: 112rpx;
+  line-height: 112rpx;
+  color: #fff;
+  margin-top: 80rpx;
+  background-color: #5693FF;
+  border: 1px solid #019DEA;
+  border-radius: 8rpx;
+}
+
+@import "../footerLogo/footerLogo.wxss"

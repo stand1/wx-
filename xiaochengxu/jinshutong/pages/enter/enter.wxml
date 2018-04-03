@@ -1,0 +1,29 @@
+<!--pages/enter/enter.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+      <view class='item'>
+        <view class='contenlist_item' bindtap='management' data-num="3">
+          <view class='contenlist_item_left'>员工相册</view>
+          <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+        </view>
+        <view class='contenlist_item' bindtap='UpdataImg' data-num="1">
+          <view class='contenlist_item_left'>企业logo</view>
+          <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+        </view>
+        <view class='contenlist_item' bindtap='UpdataImg' data-num="2">
+          <view class='contenlist_item_left'>企业相册</view>
+          <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+        </view>
+      </view>
+      <view class='item'>
+        <view class='contenlist_item' bindtap='intro'>
+          <view class='contenlist_item_left'>简介</view>
+          <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+        </view>
+        <view class='contenlist_item' bindtap='Phone'>
+          <view class='contenlist_item_left'>电话</view>
+          <view class='contenlist_item_right'> <text>{{dataList.data.phone}}</text><image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+        </view>
+      </view>
+   </view>
+</view>

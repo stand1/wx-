@@ -1,0 +1,2 @@
+<!--pages/comshow/comshow.wxml-->
+<include src="../index/index" mode='aspectFit'/>

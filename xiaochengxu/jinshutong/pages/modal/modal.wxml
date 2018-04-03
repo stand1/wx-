@@ -1,0 +1,18 @@
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+    <view class='imgwapper'>
+      <image src='../../img/tubiao/champion@3x.png'></image>
+    </view>
+  </view>
+  <view class="modal-content">
+    <view class='contenWapper'>
+      <view>您已成功<text>创建</text></view>
+      <view class='corname'>一拍科技</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">返回微主页</view>
+  </view>
+</view>

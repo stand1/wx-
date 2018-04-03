@@ -1,0 +1,50 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='wapper'>
+   <view class='conter'>
+      <view class='conter_wapper'>
+         <view class='conter_header'>
+            <view class='header_left'>
+                <view>{{nickName}}</view>
+                <view class='header_name' wx:if='{{dataList.visitUser == 0}}'>{{dataList.visitUser == 0 ? dataList.company : ''}}</view> 
+            </view>
+            <view class='header_right'><image src='{{avatarUrl}}'></image></view>
+         </view>
+         <view class='header_item' bindtap='editName'>
+            <view class='header_item_wapper'>
+               <view class='item_left'>真实姓名</view>
+               <view class='item_right'>
+                 <view class='item_name'>{{dataList.visitUser == 0 ? dataList.realname : ''}}</view>
+                 <view class='item_img'><image src='../../img/tubiao/next@3x.png'></image></view>
+               </view>
+            </view>
+         </view>
+         <view class='header_item' bindtap='changePhone'>
+            <view class='header_item_wapper'>
+               <view class='item_left'>手机</view>
+               <view class='item_right'>
+                 <view class='item_name'>{{dataList.visitUser == 0 ? dataList.telephone : ''}}</view>
+                 <view class='item_img'><image src='../../img/tubiao/next@3x.png'></image></view>
+               </view>
+            </view>
+         </view>
+      </view>
+      <view class='conter'>
+        <view class="contenlist">  
+          <view class='contenlist_item' bindtap='visiting'>
+             <view class='contenlist_item_left'><image src='../../img/tubiao/fw.png' class='tubiao'></image>  访问足迹</view>
+             <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image> </view>
+          </view>
+          <view class='contenlist_item' bindtap='enter' wx:if="{{dataList.isCreateCompany == 1}}">
+             <view class='contenlist_item_left'><image src='../../img/tubiao/qyrz.png' class='tubiao'></image> 企业管理</view>
+             <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image>  </view>
+          </view>
+          <view class='contenlist_item' bindtap='joinCompany' wx:if="{{dataList.visitUser == 1}}">
+             <view class='contenlist_item_left'><image src='../../img/tubiao/qyrz.png' class='tubiao'></image> 加入公司</view>
+             <view class='contenlist_item_right'> <image src='../../img/tubiao/next@3x.png' class='next'></image>  </view>
+          </view>
+         </view> 
+        </view>
+      </view>
+</view>
+<include src="../footerLogo/footerLogo" mode='aspectFit'/>
+

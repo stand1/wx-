@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/visitorRegistration/visitorRegistration",
+    "pages/materialCollar/materialCollar",
+    "pages/materialCollarList/materialCollarList",
+    "pages/ranking/ranking",
+    "pages/personalCenter/personalCenter",
+    "pages/newEnterprise/newEnterprise",
+    "pages/join/join",
+    "pages/uploadImg/uploadImg",
+    "pages/comImg/comImg",
+    "pages/enter/enter",
+    "pages/modal/modal",
+    "pages/modification/modification",
+    "pages/comshow/comshow",
+    "pages/intro/intro",
+    "pages/rankinglist/rankinglist",
+    "pages/joinCompany/joinCompany",
+    "pages/login/login",
+    "pages/employeesShow/employeesShow",
+    "pages/txtImg/txtImg",
+    "pages/management/management",
+    "pages/managementBJ/managementBJ",
+    "pages/managementTJ/managementTJ"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "金书僮",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#5693FF",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "img/logo/phb_1.png",
+        "iconPath": "img/logo/phb_2.png",
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行榜"
+      },
+      {
+        "selectedIconPath": "img/logo/home_1.png",
+        "iconPath": "img/logo/home_2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/logo/proe_1.png",
+        "iconPath": "img/logo/proe_2.png",
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

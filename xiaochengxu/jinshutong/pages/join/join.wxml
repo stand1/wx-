@@ -1,0 +1,50 @@
+<!--pages/join/join.wxml-->
+<view class='wapper'>
+   <view class='header_wapper'>
+     <view class='header'>
+      <view class='header_img'><image src='{{LogoArr.length>0?LogoArr[0]:"../../img/tubiao/logo_m.png"}}'></image></view>
+      <view class='header_name'><text>{{dataList.data.realname}}</text> 邀请你加入</view>
+       <view class='comName'><text>{{dataList.data.company}}</text></view>
+     </view>
+   </view>
+   <view class='conter'>
+     <view class='inputItem'>
+       <label><text> * </text> 姓名</label>
+       <input placeholder-class="phcolor" type='text' bindchange='bindCorName'data-name='' placeholder='请输入您的姓名' value='{{name}}'></input>
+     </view>
+     <view class='inputItem'>
+       <label><text> * </text>手机</label>
+       <input placeholder-class="phcolor" type='number' bindchange='bindPhone'data-name='' placeholder='请输入您的手机' value='{{phone}}'></input>
+     </view>
+     <view class='inputItem'>
+       <label><text> * </text>部门</label>
+       <input placeholder-class="phcolor" type='text' bindchange='binddept'data-name='' placeholder='请输入您的部门' value='{{dept}}'></input>
+     </view>
+     <view class='inputItem'>
+       <label><text> * </text>岗位</label>
+       <input placeholder-class="phcolor" type='text' bindchange='bindpos'data-name='' placeholder='请输入您的岗位' value='{{pos}}'></input>
+     </view>
+     <view class='inputItem'>
+       <button class='confirm' bindtap='jion' >加入企业</button>
+     </view>
+   </view>
+</view>
+
+<!-- 模态框 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+    <view class='imgwapper'>
+      <image src='../../img/tubiao/champion@3x.png'></image>
+    </view>
+  </view>
+  <view class="modal-content">
+    <view class='contenWapper'>
+      <view>您已成功<text>加入</text></view>
+      <view class='corname'>{{dataList.data.company}}</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">返回微主页</view>
+  </view>
+</view>

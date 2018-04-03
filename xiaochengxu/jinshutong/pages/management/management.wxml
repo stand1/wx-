@@ -1,0 +1,18 @@
+<!--pages/management/management.wxml-->
+<view class="item-box">  
+  <view class="items">  
+    <view wx:for="{{imgArr}}"  wx:key="{{index}}"  class="item">  
+      <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt">  
+         <image src='{{item.imageurl}}'></image>
+         <view class='item_txt'><text>{{item.tags}}</text></view> 
+      </view>  
+      <view data-index="{{index}}" class="inner wapper_cz">
+         <view data-index="{{index}}" bindtap = "bjItem" class="inner bj">编辑</view> 
+         <view data-index="{{index}}" bindtap = "delItem" class="inner del">删除</view>  
+      </view> 
+    </view>  
+  </view>  
+</view>  
+<view class='footer'>
+   <button class='confirm' bindtap='confirm' >添加</button> 
+</view>

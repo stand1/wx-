@@ -1,0 +1,18 @@
+<!--pages/joinCompany/joinCompany.wxml-->
+<view class='wapper'>
+  <view class='header'>
+    <text class='txt'>加入公司</text>
+  </view>
+  <view class='conten'>
+    <view class='inputItem'>
+      <label><text></text> 搜索公司</label>
+      <input placeholder-class="phcolor" type='text' bindinput='corName' placeholder='请输入公司名称' data-name='搜索公司' value='{{corName}}'></input> 
+    </view>
+  </view>
+  <view class='footer'>
+     <view class='footer_content' wx:for='{{comArr}}' wx:key='{{this}}' bindtap='tap' data-name='{{item.contactor}}'>
+        <view class='footer_name'>{{item.company}}</view>
+     </view>
+     <view wx:if='{{comArr.length == 0 && isShow == true}}' class='but' bindtap='newCom'><button>公司未创建点击创建公司</button></view>
+  </view>
+</view>

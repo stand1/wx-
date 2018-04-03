@@ -1,0 +1,59 @@
+<view class='header'>
+ <text class='txt'>{{title}}</text> 
+</view>
+
+<view class='conten'>
+ <view class='inputItem'>
+   <label><text></text><text class='label_txt'>访问公司</text></label>
+   <!-- <input placeholder-class="phcolor" type='text' bindchange='bindblurCorName'data-name='访问公司' value='{{corName}}'></input> -->
+    <view class='city'>{{corName}}</view> 
+ </view>
+ <view class='inputItem'>
+   <label><text>* </text><text class='label_t'>访客姓名</text></label>
+   <input placeholder-class="phcolor" type='text' placeholder='请输入您的姓名' bindchange='bindchangeName' data-name='访客姓名'></input>
+ </view>
+ <view class='inputItem'>
+   <label><text>* </text><text class='label_t'>访客电话</text></label>
+   <input placeholder-class="phcolor" type='number' placeholder='请输入您的联系电话' bindchange='bindchangePhone' data-name='访客电话'></input>
+ </view>
+ <view class='inputItem' wx:if="{{showTodept == 0}}">
+   <label><text></text><text class='label_txt'>拟访问部门</text></label>
+   <view class="section">
+     <picker bindchange="bindPickerChange" value="{{indexTodept}}" range="{{arrTodept}}">
+       <view class="picker">
+         <!-- <input placeholder-class="phcolor" type='text' placeholder='请选择...' value='{{arrTodept[indexTodept]}}' bindblur='bindinputDepartment' data-name='拟访问部门'></input> -->
+         <view class='city'>{{arrTodept[indexTodept]==undefined?'请选择...':arrTodept[indexTodept]}}</view>
+       </view>
+     </picker>
+   </view>
+ </view>
+ <view class='inputItem' wx:if="{{showTodept == 0}}">
+   <label><text></text><text class='label_txt'>来访事项</text></label>
+   <view class="section">
+     <picker bindchange="bindBusinessChange" value="{{indexBusiness}}" range="{{arrBusiness}}">
+       <view class="picker">
+         <!-- <input placeholder-class="phcolor" type='text' placeholder='请选择...' value='{{arrBusiness[indexBusiness]}}' data-name='来访事项'></input> -->
+         <view class='city'>{{arrBusiness[indexBusiness]==undefined?'请选择...':arrBusiness[indexBusiness]}}</view>
+       </view>
+     </picker>
+   </view>
+ </view>
+  <view class='inputItem' wx:if="{{showDate == 0}}">
+   <label><text></text><text class='label_txt'>预约时间</text></label>
+   <view class="section">
+     <picker mode="date" value="{{date}}" start="2015-09-01" end="2047-09-01" bindchange="bindDateChange">
+       <view class="picker">
+         <!-- <input placeholder-class="phcolor" type='text' placeholder='请输入您的预约时间'value='{{scheduretime}}' data-name='预约时间'></input> -->
+         <view class='city'>{{scheduretime==undefined?'请输入您的预约时间':scheduretime}}</view>
+       </view>
+     </picker>
+   </view>
+ </view>
+</view>
+<view class='inputItem'>
+    <button class='confirm' bindtap='getInformation' >确认</button> 
+ </view>
+
+<include src="../footerLogo/footerLogo" mode='aspectFit'/>
+
+
